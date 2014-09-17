@@ -1,0 +1,24 @@
+[user]
+	name = tokushige
+	email = takuro@tkr.mydns.jp
+[core]
+	excludesfile = /Users/tokushige/.gitignore_global
+	#editor = atom -w
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = matching
+[http]
+	sslVerify = false
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[credential]
+	helper = osxkeychain
