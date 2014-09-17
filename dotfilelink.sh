@@ -5,7 +5,9 @@ if [ ! -d "~/.dotfile" ];then
 fi
 
 if [ ! -d "~/.vim" ];then
-    mkdir ~/.vim
+    mkdir -p ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 fi
 cp -pr . ~/.dotfile/
 ln -sf ~/.dotfile/.vimrc ~/.vimrc
