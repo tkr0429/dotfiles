@@ -4,6 +4,9 @@ if [ ! -d "~/.dotfile" ];then
     mkdir ~/.dotfile
 fi
 
+if [ ! -d "~/.vim" ];then
+    mkdir ~/.vim
+fi
 cp -pr . ~/.dotfile/
 ln -sf ~/.dotfile/.vimrc ~/.vimrc
 ln -sf ~/.dotfile/.gvimrc ~/.gvimrc
