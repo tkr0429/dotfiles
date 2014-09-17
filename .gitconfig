@@ -1,8 +1,5 @@
-[user]
-	name = tokushige
-	email = takuro@tkr.mydns.jp
 [core]
-	excludesfile = /Users/tokushige/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	#editor = atom -w
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

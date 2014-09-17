@@ -1,0 +1,28 @@
+snippet use
+        use strict;
+        use warnings;
+        
+snippet d
+        use Data::Dump qw/dump/;
+        
+snippet c
+        use Carp qw/croak/;
+        
+snippet n
+        sub new {
+                my $class = shift;
+                my $args = ref $_[0] ? $_[0] : +{@_};
+                ${1:code}
+                bless $args, $class;
+        }
+        
+snippet l
+        use Class::Accessor::Lite
+        
+snippet ll
+        Clas::Accessor::Lite->mk_accessors(${1:accessors});
+        
+snippet s
+        subtest '${1:testname}' => sub {
+        ${2:testbody}
+        };

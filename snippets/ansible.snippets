@@ -1,0 +1,147 @@
+# -*- mode: ansible -*-
+# vi: set ft=ansible :
+
+snippet apt "Apt declaration" !b
+- name: install $1
+  sudo: yes
+  apt:
+    pkg: $2
+    state: latest
+endsnippet
+
+snippet template "Template declaration" !b
+- name: $1
+  sudo: yes
+  template:
+    src: $2
+    dest: $3
+    owner: $4
+    group: $5
+endsnippet
+
+
+snippet yum "Yum declaration" !b
+- name: install $1
+  sudo: yes
+  yum:
+    pkg: $1
+    state: latest
+endsnippet
+
+
+snippet service "Service declaration" !b
+- name: $1
+  sudo: yes
+  service:
+    name: $2
+    enabled: yes
+    state: $3
+endsnippet
+
+
+snippet user "User declaration" !b
+- name: add user $1
+  sudo: yes
+  user:
+    name: $1
+    shell: ${2:/bin/bash}
+    state: present
+endsnippet
+
+
+snippet file "File declaration" !b
+- name: $1
+  sudo: yes
+  file:
+    path: $2
+    owner: $3
+    group: $4
+    state: $5
+endsnippet
+
+
+snippet copy "Copy declaration" !b
+- name: $1
+  sudo: yes
+  copy:
+    src: $2
+    dest: $3
+    owner: $4
+    group: $5
+    mode: ${6:0644}
+endsnippet
+
+
+snippet pip "Pip declaration" !b
+- name: install $1
+  sudo: yes
+  pip:
+    name: $1
+    state: ${2:latest}
+endsnippet
+
+
+snippet django "Django declaration" !b
+- name: $1
+  sudo: yes
+  django_manage:
+    command: $2
+    app_path: $3
+endsnippet
+
+
+snippet apt_repository "Apt_repository declaration" !b
+- name: $1
+  sudo: yes
+  apt_repository:
+    repo: $2
+    state: present
+endsnippet
+
+
+snippet command "Command declaration" !b
+- name: $1
+  sudo: yes
+  command: $2
+endsnippet
+
+
+snippet apt_key "Apt_key declaration" !b
+- name: $1
+  sudo: yes
+  apt_key:
+    url: $2
+    state: present
+endsnippet
+
+
+snippet django_manage "Django_manage declaration" !b
+- name: $1
+  sudo: yes
+  sudo_user: "{{ webapp_user }}"
+  django_manage:
+    app_path: $2
+    command: $3
+    virtualenv: "~{{ webapp_user }}/.virtualenvs/$4"
+endsnippet
+
+
+snippet git "Git declaration" !b
+- name: $1
+  sudo: yes
+  sudo_user: "{{ webapp_user }}"
+  git:
+    repo: $2
+    dest: $3
+    accept_hostkey: yes
+    depth: 1
+endsnippet
+
+
+snippet get_url "Get_url declaration" !b
+- name: $1
+  get_url:
+    url: $2
+    dest: $3
+    sha256sum: $4
+endsnippet
