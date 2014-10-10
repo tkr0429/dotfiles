@@ -22,6 +22,7 @@ NeoBundle "Shougo/neosnippet-snippets"
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree' 
+NeoBundle 'h1mesuke/vim-alignta'
 " jedi-vim系
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'davidhalter/jedi-vim'
@@ -38,10 +39,12 @@ NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+"NeoBundle 'vim-pandoc/vim-pandoc'
+"NeoBundle 'vim-pandoc/vim-pandoc-syntax'
 
 filetype plugin indent on     " required!
 filetype indent on
-syntax on
+"syntax on
 
 colorscheme hybrid
 
