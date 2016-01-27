@@ -18,5 +18,8 @@ ln -sf ~/.dotfile/snippets ~/.vim/
 ln -sf ~/.dotfile/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfile/.gitignore_global ~/.gitignore_global
 
+<<<<<<< HEAD
 cd ~/.vim/bundle/vimproc && make
 
+=======
+>>>>>>> 275f6464282c56584fc75beadc0be22d2511e2f3
