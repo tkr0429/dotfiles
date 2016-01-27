@@ -10,7 +10,7 @@
 [push]
 	default = matching
 [http]
-	sslVerify = false
+	sslverify = false
 [color]
 	ui = auto
 [diff]
@@ -19,3 +19,6 @@
 	tool = vimdiff
 [credential]
 	helper = osxkeychain
+[user]
+	email = t.tokushige@gmail.com
+	name = tokushige

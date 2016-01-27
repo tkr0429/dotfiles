@@ -33,11 +33,15 @@ set incsearch
 set autoindent
 set ic
 set ts=4
-set noexpandtab
+"set noexpandtab
+set expandtab
+set softtabstop=4
 set shiftwidth=4
+set imdisable
 
 "リマップ関連
 inoremap ¥ \
+inoremap 　 <Space>
 "<ESC>
 inoremap <C-q> <Esc>
 vnoremap <C-q> <Esc>

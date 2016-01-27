@@ -18,4 +18,5 @@ ln -sf ~/.dotfile/snippets ~/.vim/
 ln -sf ~/.dotfile/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfile/.gitignore_global ~/.gitignore_global
 
+cd ~/.vim/bundle/vimproc && make
 
